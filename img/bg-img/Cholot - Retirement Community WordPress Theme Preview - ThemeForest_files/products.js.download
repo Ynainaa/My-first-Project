@@ -1,0 +1,358 @@
+var $products,
+	$current_product = 'alamak_wp';
+
+// List all the products here
+
+$products = {
+    cholot: {
+        name: 'Cholot Theme',
+        tag: 'WP',
+        img: 'https://themeforest.img.customer.envatousercontent.com/files/268266944/cholot-preview.__large_preview.jpg?auto=format&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=63e44b53e6eeeae82ae42c847800d826',
+        url: 'https://theme.winnertheme.com/cholot',
+        purchase: 'https://1.envato.market/1krDx',
+        responsive: 0
+    },
+    anggita: {
+        name: 'Anggita Theme',
+        tag: 'WP',
+        img: 'https://themeforest.img.customer.envatousercontent.com/files/266337175/anggita-preview.__large_preview.jpg?auto=format&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=7531cf7bdc2c0677747d4fdd9ae5e217',
+        url: 'https://theme.winnertheme.com/anggita/landing',
+        purchase: 'https://1.envato.market/xjnOd',
+        responsive: 0
+    },
+	derwati: {
+        name: 'Derwati Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/251857574/derwati-preview.__large_preview.jpg',
+        url: 'https://theme.ridianur.com/derwati/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fderwati-trendy-creative-portfolio-theme%2F22367601',
+        responsive: 0
+    },
+    sabvga: {
+        name: 'Sabvga Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/246992982/sabvga-preview.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/sabvga/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fsabvga-modern-creative-portfolio-theme%2F21950400',
+        responsive: 0
+    },
+    dubidam: {
+        name: 'Dubidam Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/245059280/dubidam-preview.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/dubidam/landing-page/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fdubidam-creative-multi-concept-one-page-portfolio-theme%2F21761625',
+        responsive: 0
+    },
+    gehou: {
+        name: 'Gehou Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/244235387/gehou-preview.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/gehou',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgehou-a-modern-restaurant-cafe-theme%2F21686123',
+        responsive: 0
+    },
+    hampoz: {
+        name: 'Hampoz Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/242072993/hampoz-preview.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/hampoz/landing-page/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fhampoz-responsive-interior-design-architecture-theme%2F21485108',
+        responsive: 0
+    },
+    bagja: {
+        name: 'Bagja Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/241624322/bagja-preview.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/bagja/landing-page/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbagja-responsive-multi-concept-one-page-portfolio-theme%2F21442663',
+        responsive: 0
+    },
+    gerlong: {
+        name: 'Gerlong Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/240052366/gerlong-preview.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/gerlong/landing-page/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgerlong-responsive-one-page-multi-page-portfolio-theme%2F21286745',
+        responsive: 0
+    },
+
+    cimol: {
+        name: 'Cimol Theme',
+        tag: 'WP',
+        img: 'https://s3.envato.com/files/238186828/cimol-preview-wp.__large_preview.jpg',
+        url: 'http://theme.ridianur.com/cimol/landing-page/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcimol-responsive-one-page-multi-page-portfolio-theme%2F21105305',
+        responsive: 0
+    },
+    geuz: {
+        name: 'Geuz Template',
+        tag: 'HTML',
+        img: 'https://s3.envato.com/files/236716628/geuz-preview.__large_preview.jpg',
+        url: 'http://template.ridianur.com/geuz/',
+        purchase: 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgeuz-responsive-one-page-portfolio-template%2F20957865',
+        responsive: 0
+    },
+                cordon: {
+		name     : 'Cordon Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/237101112/cordon-preview-wp.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/cordon/landing-page/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcordon-responsive-one-page-multi-page-portfolio-theme%2F20821729',
+		responsive: 0 
+	},
+                andier: {
+		name     : 'Andier Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/235898688/andier-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/andier/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fandier-responsive-one-page-multi-page-portfolio-theme%2F20703842',
+		responsive: 0 
+	},
+                baowe: {
+		name     : 'Baowe Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/235827306/baewe-wp-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/baewe/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbaowe-responsive-onemulti-page-portfolio-wordpress-theme%2F20758187',
+		responsive: 0 
+	},
+         kordon: {
+		name     : 'Kordon Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/233459602/kordon-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/kordon/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fkordon-responsive-one-page-multi-page-portfolio-template%2F20634641',
+		responsive: 0 
+	},
+                baewe: {
+		name     : 'Baewe Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/232893869/baewe-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/baewe/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbaewe-responsive-one-page-multi-page-portfolio-template%2F20580740',
+		responsive: 0 
+	},
+         andior: {
+		name     : 'Andior Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/232195931/andior-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/andior/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fandior-responsive-one-page-multi-page-portfolio-template%2F20516985',
+		responsive: 0 
+	},
+         diux_wp : {
+		name     : 'Diux Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/231198770/diux-theme-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/diux/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fdiux-responsive-one-page-portfolio-theme%2F20418533',
+		responsive: 0 
+	},
+        benten_wp : {
+		name     : 'Benten Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/229637603/benten-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/benten/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbenten-responsive-one-page-portfolio-theme%2F20256355',
+		responsive: 0 
+	},
+
+         diux : {
+		name     : 'Diux Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/229259348/diux-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/diux/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fdiux-responsive-one-page-portfolio-template%2F20220304',
+		responsive: 0 
+	},
+        benten: {
+		name     : 'Benten Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/228788305/benten-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/benten/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbenten-responsive-one-page-portfolio-template%2F20175238',
+		responsive: 0 
+	},
+        cizarua_wp : {
+		name     : 'Cizarua Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/222532705/ciarua-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/cizarua/landing-page/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcizarua-responsive-one-page-portfolio-theme%2F19692781',
+		responsive: 0 
+	},
+        cizarua : {
+		name     : 'Cizarua Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/223587567/ciarua-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/cizarua/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcizarua-responsive-one-page-portfolio-template%2F19585446',
+		responsive: 0 
+	},
+        omat : {
+		name     : 'Omat Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/213439549/omat-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/omat/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fomat-responsive-one-page-portfolio-template%2F18708225',
+		responsive: 0 
+	},
+        bahe_wp : {
+		name     : 'Bahe Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/184985308/bahe-preview-wp.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/bahe/demo/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fbahe-responsive-one-page-portfolio-theme%2F15353324',
+		responsive: 0 
+	},
+        bahe : {
+		name     : 'Bahe Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/170638495/bahe-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/bahe/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fbahe-responsive-one-page-portfolio-theme%2F14769647',
+		responsive: 0 
+	},
+        brehoh_wp : {
+		name     : 'Brehoh Theme',
+		tag      : 'WP',
+		img      : 'https://s3.envato.com/files/148317780/brehoh-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/brehoh/demo-page/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fbrehoh-responsive-one-page-portfolio-theme%2F12645438',
+		responsive: 0 
+	},
+        brehoh : {
+		name     : 'Brehoh Template',
+		tag      : 'HTML',
+		img      : 'https://s3.envato.com/files/144927442/brehoh-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/brehoh/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbrehoh-responsive-one-page-portfolio-template%2F12351056',
+		responsive: 0 
+	},
+
+  
+
+        aslina_wp : {
+		name     : 'Aslina Theme',
+		tag      : 'WP',
+		img      : 'https://0.s3.envato.com/files/128754338/aslina.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/aslina/landing',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Faslina-responsive-one-page-portfolio-theme%2F10961258',
+		responsive: 0 
+	},
+
+	aslina : {
+		name     : 'Aslina Template',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/125063798/aslina-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/aslina',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Faslina-responsive-one-page-portfolio-template%2F10595715',
+		responsive: 0 
+	},
+	clbk_wp : {
+		name     : 'CLBK Theme',
+		tag      : 'WP',
+		img      : 'https://0.s3.envato.com/files/117638402/clbk-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/clbk/choose-your-demo/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fclbk-responsive-one-page-portfolio-theme%2F9979572',
+		responsive: 0 
+	},
+	clbk : {
+		name     : 'CLBK Template',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/109280722/clbk_preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/clbk',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fclbk-responsive-one-page-portfolio-template%2F9231836',
+		responsive: 0 
+	},
+	beuh_wp : {
+		name     : 'Beuh Theme',
+		tag      : 'WP',
+		img      : 'https://0.s3.envato.com/files/101840904/beuh11.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/beuh/landing-page/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fbeuh-responsive-one-page-portfolio-theme%2F8513549',
+		responsive: 0 
+	},
+	beuh : {
+		name     : 'Beuh Template',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/99251793/beuh-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/beuh',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fbeuh-responsive-one-page-portfolio-template%2F8375182',
+		responsive: 0 
+	},
+	gedebvge_wp : {
+		name     : 'Gedebvge Theme',
+		tag      : 'WP',
+		img      : 'https://0.s3.envato.com/files/91978120/gede_preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/gedebvge/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fgedebvge-responsive-one-page-portfolio-theme%2F7791427',
+		responsive: 0 
+	},
+	xovlox_wp : {
+		name     : 'Xovlox Theme',
+		tag      : 'WP',
+		img      : 'https://0.s3.envato.com/files/104285696/xovlox_preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/xovlox/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fxovlox-one-page-parallax-portfolio-theme%2F7704371',
+		responsive: 0 
+	},
+	gedebvge : {
+		name     : 'Gedebvge Template',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/89013219/gedebvge_preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/gedebvge/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fgedebvge-responsive-one-page-portfolio-template%2F7525114',
+		responsive: 0 
+	},
+	xovlox : {
+		name     : 'Xovlox Template',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/87107087/xovlox-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/xovlox/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fxovlox-one-page-parallax-portfolio-template%2F7362906',
+		responsive: 0 
+	},
+	alamak_wp : {
+		name     : 'Alamak Theme',
+		tag      : 'WP',
+		img      : 'https://0.s3.envato.com/files/101840991/alamak-wp-preview.__large_preview.jpg',
+		url      : 'http://theme.ridianur.com/alamak/landing/',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Falamak-responsive-one-page-portfolio-theme%2F6502151',
+		responsive: 0 
+	},
+	alamak : {
+		name     : 'Alamak Template',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/75520996/preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/alamak/landing.html',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Falamak-responsive-one-page-portfolio%2F6366889',
+		responsive: 0 
+	},
+	bertato : {
+		name     : 'Bertato Coming Soon',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/61721102/bertato-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/bertato',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fbertato-responsive-coming-soon-page%2F5181593',
+		responsive: 0 
+	},
+	koplax_cs : {
+		name     : 'Koplax Coming Soon',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/59364566/koplax-preview.__large_preview.jpg',
+		url      : 'http://template.ridianur.com/koplax',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Fkoplax-responsive-coming-soon-page%2F4671100',
+		responsive: 0 
+	},
+	lalawora_cs : {
+		name     : 'Lalawora Coming Soon',
+		tag      : 'HTML',
+		img      : 'https://0.s3.envato.com/files/59364436/Lalawora.__large_preview.jpg',
+		url      : 'http://www.ridianur.com/template/lalawora/index.html',
+		purchase : 'https://1.envato.market/c/1263254/275988/4415?u=http%3A%2F%2Fthemeforest.net%2Fitem%2Flalawora-responsive-coming-soon-page%2F4428114',
+		responsive: 0 
+	}
+
+};
